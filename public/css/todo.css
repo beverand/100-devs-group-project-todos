@@ -1,0 +1,92 @@
+.container {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	/* columns: 8; */
+	align-items: center;
+}
+.todo-container {
+	/* display: grid; */
+	/* columns: 8; */
+    width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	padding: 3rem;
+	border: 2px solid black;
+	border-radius: 0.5rem;
+}
+h1 {
+	text-align: center;
+	/* margin-top: 3rem;
+	margin-bottom: 3rem; */
+}
+h4{
+    text-align: center;
+}
+.form-container{
+    width: 60%;
+    margin-left: auto;
+	margin-right: auto;
+}
+.signup-form{
+    text-align: center;
+}
+.input-container{
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+input{
+    width: 80%;
+    padding: .5rem;
+    border: 1px solid grey;
+    border-radius: .5rem;
+}
+.button-container {
+	text-align: center;
+}
+a{
+    padding: none;
+}
+.btn {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+}
+.btn-primary {
+	background: dodgerblue;
+	border: 2px solid dodgerblue;
+}
+.btn-primary:hover {
+	background: deepskyblue;
+}
+.btn-danger{
+    color: white;
+	background: darkred;
+	border: 2px solid darkred;
+}
+.btn-dark {
+    color: white;
+	background: black;
+	border: 2px solid black;
+    text-decoration: none;
+}
+.todoItem-container{
+    width: 85%;
+    margin-left: auto;
+	margin-right: auto;
+    margin-top: .5rem;
+	border: 2px solid black;
+    border-radius: .5rem;
+}
+.todoItem{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+span{
+    line-height: 2rem;
+}

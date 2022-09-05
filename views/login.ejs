@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
     <title>Document</title>
 </head>
 <body>
@@ -17,10 +19,43 @@
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
     <% } %>
-    <form action="/login" method="POST">
+    <!-- <form action="/login" method="POST">
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
         <input type="submit">
-    </form>
+    </form> -->
+    <div class="container">
+            <div
+                class="login-container">
+                <h1 class="">Welcome Back</h1>
+                <p class="">Sign in to view your ToDo lists</p>
+                <div class="form-container">
+                    <form action="/login" method="POST" class="signup-form">
+                        <div class="input-container">
+                            <!-- <label for="email" class="form-label">
+                                Email:
+                            </label> -->
+                            <input type="email" class="form-control"
+                                name="email" placeholder="Email:">
+                        </div>
+                        <div class="input-container">
+                            <!-- <label for="password" class="form-label">
+                                Password:
+                            </label> -->
+                            <input type="password" class="form-control"
+                                name="password" placeholder="Password:">
+                        </div>
+                        <div class="">
+                            <button type="submit" class="btn btn-primary">
+                                Sign In
+                            </button>
+                            <a href="/signup" class="btn btn-dark" >
+                                    Sign Up
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </div>
 </body>
 </html>
