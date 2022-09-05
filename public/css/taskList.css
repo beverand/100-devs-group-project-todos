@@ -1,0 +1,67 @@
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+a {
+  text-decoration: none;
+  color:white;
+}
+
+.btn {
+  padding: 5px 10px;
+  cursor: pointer;
+  background: dodgerblue;
+  border-radius: 8px;
+  border: none;
+  color: white;
+}
+
+.btn:hover{
+  background: deepskyblue;
+}
+
+section {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+  align-items: center;
+  width: 80%;
+}
+
+
+.tasklist {
+  width: 50%;
+  border: 2px solid lightgray;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.form_container {
+  width: 50%;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+
