@@ -6,29 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/login.css">
-    <title>Document</title>
+    <title>To Do - Log In</title>
 </head>
 <body>
-    <% if (locals.messages.errors) { %>
-        <% messages.errors.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-    <% if (locals.messages.info) { %>
-        <% messages.info.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
+  
     <!-- <form action="/login" method="POST">
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
         <input type="submit">
     </form> -->
-    <div class="container">
-            <div
-                class="login-container">
+    <div class="container">  
+        <%- include('partials/img'); %> 
+
+        
+        <div class="flash_msj">
+            <% if (locals.messages.errors) { %>
+                <% messages.errors.forEach( el => { %>
+                    <div class="alert alert-danger"><%= el.msg %></div>
+                <% }) %>    
+            <% } %>
+            <% if (locals.messages.info) { %>
+                <% messages.info.forEach( el => { %>
+                    <div class="alert alert-danger"><%= el.msg %></div>
+                <% }) %>    
+            <% } %>
+        </div>
+
+     <div>
+        <% if (locals.messages.errors) { %>
+            <% messages.errors.forEach( el => { %>
+                <div class="alert alert-danger"><%= el.msg %></div>
+            <% }) %>    
+        <% } %>
+        <% if (locals.messages.info) { %>
+            <% messages.info.forEach( el => { %>
+                <div class="alert alert-danger"><%= el.msg %></div>
+            <% }) %>    
+        <% } %>
+     </div>
+            <div class="login-container">
                 <h1 class="">Welcome Back</h1>
-                <p class="">Sign in to view your ToDo lists</p>
+                <p class="">Sign in to view your To Do lists</p>
                 <div class="form-container">
                     <form action="/login" method="POST" class="signup-form">
                         <div class="input-container">
@@ -49,10 +67,10 @@
                             <button type="submit" class="btn btn-primary">
                                 Sign In
                             </button>
-                            <a href="/signup" class="btn btn-dark" >
-                                    Sign Up
-                            </a>
                         </div>
+                        <p class="dhave_ac">Don`t have an account? <a href="/signup" >
+                            Sign Up        
+                        </a></p>
                     </form>
                 </div>
             </div>

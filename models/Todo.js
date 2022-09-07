@@ -15,8 +15,7 @@ const TodoSchema = new mongoose.Schema({
 	},
 	listName: {
 		type: String,
-		required: true,
-		default: 'uncategorized'
+		required: true
 	}
 });
 

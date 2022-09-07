@@ -4,48 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task lists</title>
+    <title>To Do - Task lists</title>
     <link rel="stylesheet" href="../css/taskList.css">
 </head>
 <body>
     <%- include('partials/navbar'); %> 
     <!-- navbar ejs to keep code dry (logout button) -->
-    <main>
-    <h1><%= user.userName %> Lists.</h1> 
-    <section>
-        <table class="tasklist">
-            <tr>
-                <th>Task lists</th>
-                <th>progress</th>
-            </tr>
-            <tbody>
-                <% if (listName.length == 0) { %>
-                    <tr>
-                      <td colspan='2' class="no-list"><h2>No task list</h2></td>
-                    </tr>
-                    <% } else {%>
-                <% listName.forEach(el => { %>
-                <tr>
-                    <td> <%= el %> </td>
-                    <td> <input type="range"> </td>
-                </tr>
-                <% }) %>
-          <% } %>
 
-            </tbody>
-        </table>
+    <main>
+        <%- include('partials/img'); %> 
+
+        <section>
+    <h1><%= user.userName %> Lists.</h1>
     
-      <div class="form_container">
-        <form class="form" action="createList" method="post">
-            <label for="listName">List name</label>
-            <input type="text" name="listName" id="listName">
-            <input class="btn" type="submit" value="Add list">
+    <div class="form_container">
+        <form class="form" action="list" method="POST">
+            <input type="text" name="listName" id="listName" placeholder="Create your list">
         </form>
       </div>
+
+        <section class="tasklist">
+            <div class="listName_container">
+        <ul>
+                <% if (listName.length == 0) { %>
+
+                      <li colspan='2' class="no-list"><h2>No task list</h2></i>
+
+                    <% } else {%>
+                <% listName.forEach(el => { %>
+                    <li data-name='<%= el %>' class="listN"> <%= el %> </li>
+                <% }) %>
+          <% } %>
+        </ul>
+            </div>
     </section>
 </main>
 
 
-    <script src="../js/main.js"></script>
+    <script src="../js/tasklist.js"></script>
+
+
 </body>
 </html>

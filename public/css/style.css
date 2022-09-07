@@ -2,9 +2,29 @@
     color: red;
 } */
 .completed{
-    text-decoration: line-through;
-    color: gray;
+    color: green;
 }
 .not{
-    text-decoration: underline;
+    color: lightcoral;
 }
+
+.container {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+img{
+    width: 100px;
+}
+
+
+.white {
+	color: white;
+ }
+
+ .blue{
+	color: dodgerblue;
+ }
