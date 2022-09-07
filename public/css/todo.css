@@ -20,10 +20,17 @@ body{
 	align-items: center;
 }
 
+
 nav {
   display: flex;
   justify-content: flex-end;
   padding: 10px 20px;
+}
+
+
+.header{
+	display: flex;
+	justify-content: end;
 }
 
 h1 {
