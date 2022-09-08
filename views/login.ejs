@@ -18,20 +18,6 @@
     <div class="container">  
         <%- include('partials/img'); %> 
 
-        
-        <div class="flash_msj">
-            <% if (locals.messages.errors) { %>
-                <% messages.errors.forEach( el => { %>
-                    <div class="alert alert-danger"><%= el.msg %></div>
-                <% }) %>    
-            <% } %>
-            <% if (locals.messages.info) { %>
-                <% messages.info.forEach( el => { %>
-                    <div class="alert alert-danger"><%= el.msg %></div>
-                <% }) %>    
-            <% } %>
-        </div>
-
      <div>
         <% if (locals.messages.errors) { %>
             <% messages.errors.forEach( el => { %>
